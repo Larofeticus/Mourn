@@ -1,2 +1,9 @@
 %h1
   Today we mourn the loss of something with both good and bad aspects.
+- flash.keys.each do |k|
+  = flash[k]
+%hr
+= link_to 'join', new_user_path
+= link_to 'sign in', log_in_path
+= link_to 'sign out', log_out_path
+= current_user ? 'logged in' : 'logged out'
